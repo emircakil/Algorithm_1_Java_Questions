@@ -150,4 +150,41 @@ public static void main(String[] args) {
         
     }
 ```
+### Algortihm that check abundant number or deficient number entered from keyboard.
+```java
+public static void main(String[] args) {
+        
+        // abundant number = the sum of its multipliers is bigger than itself
+        // deficient number = the sum of its multipliers is less than itself
+        Scanner s = new Scanner (System.in);
+        
+        int sum =0; 
+        int number = s.nextInt();
+        
+        for ( int i =1 ; i < number; i++){
+        
+            if( number % i == 0){
+                
+                sum += i;
+     
+            } 
+        }
+     
+        if ( sum > number){
+        
+            System.out.println(number + " is a abundant number.");
+        }
+        else if ( sum < number){
+            
+            System.out.println(number + " is a deficient number.");
+        }
+        else {
+            System.out.println(number +"is a normal number.");
+        }
+        
+    }
+```
+###
+
+
 
