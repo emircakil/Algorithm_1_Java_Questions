@@ -109,7 +109,7 @@ public static void main(String[] args) {
      
     }
 ```
-### Algorithm that check friendlt number to entered two numbers.
+### Algorithm that check friendly number to entered two numbers.
 ```java
 public static void main(String[] args) {
         
