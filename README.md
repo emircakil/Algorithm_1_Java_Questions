@@ -353,5 +353,41 @@ public static void main(String[] args) {
         
     }
 ```
-### Algorithm 
+###  Algorithm that check number original number or not of 4 digit numbers
+
+```java
+public static void main(String[] args) {
+     
+        // original number = square of sum of its digits first two digits and last two digits equals its number
+        
+       
+        int firstDigits , lastDigits, keep , sum;
+        double pwr;
+       
+        
+        for ( int i =1000 ; i <10000; i++){
+ 
+        keep = i ;  
+        
+        firstDigits = i /100;
+        
+        keep -= (firstDigits*100);
+        
+        lastDigits = keep;
+        
+        sum = firstDigits + lastDigits;
+        
+        pwr = Math.pow(sum , 2);
+        
+        
+            if ( pwr == i){
+        
+                System.out.println(i);
+            }
+        
+        }
+
+    }
+```
+### 
 
