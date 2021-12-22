@@ -312,5 +312,46 @@ public static void main(String[] args) {
     }
 ```
 
-###
+### Algorithm that finding t time of an airplane accelerates smoothly for 15 minutes and its speed becomes 480 km/h. Then at constant speed for 20 min. It goes and slows down smoothly for 15 minutes, and its speed becomes zero.
+
+```java
+public static void main(String[] args) {
+     
+        Scanner s = new Scanner ( System.in );
+        
+        int t = s.nextInt();
+        int plane = 0;
+        int list[] = new int [51];
+        list[0] = 0;
+                
+        for (int i = 1 ; i <= 15; i++){
+        
+            plane += 32;
+            list[i] = plane;
+        }
+        for ( int i = 16; i <= 35; i++){
+            plane += 0;
+            list[i] = plane;
+        }
+        
+        for ( int i= 36; i < 50; i++){
+        
+            plane -= 32;
+            list[i] = plane;
+        }
+        
+        
+        if ( t < 0 || t > 50){
+        
+            System.out.println("Plane is standing");
+        
+        }
+        else {
+            
+            System.out.println("Plane's speed = " + list[t]);
+        }
+        
+    }
+```
+### Algorithm 
 
