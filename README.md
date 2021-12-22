@@ -184,7 +184,133 @@ public static void main(String[] args) {
         
     }
 ```
+### Algorithm that 6 steps for finding random number of between 1 - 63 integer numbers. 
+
+```java
+ public static void main(String[] args) {
+        
+        Scanner s = new Scanner ( System.in);
+        
+        int number = s.nextInt();
+ 
+        int floor = 1 , ceiling = 63;
+        int keep; 
+        
+        
+         if ( number > 62 || number < 2 ){
+        
+            System.out.println("Please select number between of 1 and 63");
+            System.exit(0);
+        }
+        
+        for ( int i =1; i <= 6; i++){
+        
+            keep =(ceiling + floor)/2;
+            
+            System.out.println("keep =" + keep);
+           
+        
+            if ( keep == number ){
+            
+                System.out.println("I finded number = " + number);
+                System.exit(0);
+            }
+            else if ( number > keep ){
+            
+                floor = keep;
+                System.out.println("Bigger than " + keep);
+            }
+            else {
+            
+                ceiling = keep;
+                System.out.println("Less than");
+            }
+            
+        }
+        
+     
+    }
+```
+
+### Algrotihm that decimal convert to binary number.
+
+```java
+ public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        int number = s.nextInt();
+        int keep = number;
+        
+        int counter = 0 ;
+        
+        while ( keep > 0 ){
+            keep /= 2;
+            counter++;
+        }
+        
+        int binary [] = new int [counter];
+        
+        
+        for ( int i = counter-1; i >= 0; i--){
+        
+        keep = number % 2;
+        number /= 2;
+        
+        
+         if ( keep == 0){
+            
+            binary[i] = 0;
+            
+         }
+        
+         else {
+            
+            binary[i] = 1;
+             
+         }
+            
+        }
+    
+        for ( int i =0 ; i < binary.length; i++){
+        
+            System.out.print(binary[i]);
+        }
+        
+    }
+```
+### Algortihm that binary number convert to decimal number
+
+```java
+public static void main(String[] args) {
+     
+        Scanner s = new Scanner ( System.in);
+        
+        double counter =0;
+        String binary = s.next();
+        double pwr;
+        int sum =0;
+        
+        for ( int i = binary.length()-1 ; i >= 0; i--){
+        
+            char no = binary.charAt(i);
+            
+            if ( no == '1' ){
+            
+                pwr = Math.pow(2, counter);
+                sum += pwr;
+            
+            }
+            else {
+            
+            }
+            counter++;
+        
+        }
+        System.out.println(sum);
+        
+    }
+```
+
 ###
-
-
 
