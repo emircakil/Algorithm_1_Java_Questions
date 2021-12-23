@@ -707,6 +707,65 @@ public static void main(String[] args) {
     }
 ```
 
+### Algorithm that writing backwards of a word.
+
+```java
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+     
+        String word = s.next();
+        
+        String turn = writeBackwards(word);
+        System.out.println( turn);
+    }
+    
+    public static String writeBackwards ( String x){
+    
+    String y = "" ;
+
+    for ( int i =x.length()-1 ; i >= 0; i--){
+    
+        y += x.charAt(i);
+        
+    }
+    
+    return y;
+    
+    }
+```
+### There is an array with N elements. Algorithm that places the numbers entered from the keyboard into the array, one from the beginning and one from the end.
+
+```java
+ public static void main(String[] args) {
+     
+        Scanner s = new Scanner (System.in);
+        System.out.println("Please enter the array's length");
+        int x = s.nextInt();
+        String [] list = new String[x];
+        int lng = list.length;
+       
+    for ( int i = 0 , j = list.length-1; i < lng/2  ; i++, j--){
+    
+        list[i] = s.next();
+        list[j] = s.next();
+     
+    }
+    
+    if ( lng % 2 == 1){
+    
+        System.out.println("Please enter middle and last value");
+        list[lng/2] = s.next();
+    
+    }
+    
+    for ( int i =0; i < list.length; i++){
+    
+        System.out.print(list[i] + " ");
+    }
+        
+    }
+```
 ### 
 
 
