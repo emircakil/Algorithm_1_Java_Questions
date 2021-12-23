@@ -671,6 +671,42 @@ public static void main(String[] args) {
     return sum;
 ```
 
+### Algorithm that calclate  ∑ (1/i! + i/ (n-i)!. n enter from keyboard.
+
+```java
+public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        double n = s.nextDouble();
+        double sum =0; 
+        double keep;
+        double factorial =1 ;
+        double factorial2 = 1;
+        
+        for ( int i = 1; i <= n; i++){
+        
+         for ( int f = 1; f <= i ; f++){
+         
+             factorial *= f;
+         }
+         for ( int f = 1; f < (n-i); f++){
+         
+             factorial2 *= f;
+         }
+         
+         keep = (1/factorial) + ( i / factorial2 );
+         sum += keep;
+         factorial =1;
+         factorial2 = 1;
+        
+        
+        }
+        System.out.println(sum);
+  
+    }
+```
+
 ### 
 
 
