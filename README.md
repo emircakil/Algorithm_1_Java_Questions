@@ -389,5 +389,115 @@ public static void main(String[] args) {
 
     }
 ```
-### 
+### Algrorithm that check smith number or not of 4 digit numbers 
 
+```java
+public static void main(String[] args) {
+        
+        // smith number = If the sum of the digits of a non-prime integer greater than 1 is equal to the sum of the digits of all prime numbers in that spelling when the number is written by factoring the prime.
+        
+        int thousands , hundreds, tens, ones;
+        int keep ;
+        int sum = 0 , sum2 = 0;
+        
+        for ( int i = 1000; i < 10000; i++){
+        
+            keep = i;
+            
+            thousands = i / 1000;
+            i -= thousands*1000;
+            
+            hundreds =  i / 100;
+            i -= hundreds*100;
+            
+            tens = i / 10;
+            i -= tens*10;
+            
+            ones = i/1;
+            
+            sum += (thousands + hundreds + tens + ones);
+           
+            
+            i = keep;
+            
+         
+           for( int j = 2 ; j < i ; ){
+            
+                if ( keep % j == 0){
+                
+                sum2 += j;
+                keep /= j;
+    
+                }
+                else {
+                    
+                    j++;
+                    
+                }
+              
+            }
+            
+             if ( sum == sum2){
+                System.out.println(i);
+        
+            }
+             sum = 0;
+             sum2 = 0;
+    
+            }
+   
+        }
+```
+
+###  Algorithm that finding biggest of number's digits.
+
+```java
+ public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        int number = s.nextInt();
+        
+        System.out.println("Biggest digit of number = " + biggest(number));
+    
+    }
+    
+    public static int biggest ( int x){
+    
+    int digit = 0;
+    int sum = 0;
+    int keep = x;
+    
+    
+        while ( x > 0){
+        
+         digit++;
+         x /= 10;
+    }
+    
+         x = keep;
+    
+    int list [] = new int [digit];
+    
+    int big = list[0];
+    
+        for ( int i =0 ; i < digit; i++){
+    
+            list[i] = x % 10;
+    
+            x /= 10;
+            
+            if ( big < list[i]){
+                
+                big = list[i];
+                
+            }
+       
+    }
+    
+    return big;
+    
+    }
+```
+
+###
