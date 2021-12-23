@@ -500,4 +500,181 @@ public static void main(String[] args) {
     }
 ```
 
-###
+### Algorithm that degree convert to radian and grad.
+```java
+// 180 degree = pi radyan = 200grad
+    
+    public static void main(String[] args) {
+     
+        Scanner s = new Scanner (System.in);
+        
+        double degree = s.nextInt();
+        
+        System.out.println(degree + " degree = " +convert (degree)[0] + " radian = " + convert(degree)[1] + " grad" );
+    }
+    
+    public static double[] convert (double x){
+    
+        double radian = x / 180;
+        double grad = (10 * x) / 9;
+        
+        double [] list = {radian, grad};
+        
+        return list;
+        
+    }
+```
+### Algorithm that calculate series of 1+ x / 1! + x^2 / 2! + x^3 / 3! ... n and x entering from keyboard
+``` java
+public static void main(String[] args) {
+        
+        Scanner s = new Scanner ( System.in);
+        
+        System.out.println("Please enter the x value");
+        
+        double number1 = s.nextInt();
+        
+        System.out.println("Please enter the n value");
+        
+        double number2 = s.nextInt();
+        
+        System.out.println( calculate( number1 , number2 ));
+    }
+    
+    public static double calculate ( double x , double n){
+    
+    double factorial = 1 ;
+    double sum = 1;
+    double pwr, keep;
+    
+    
+    for ( int i = 1; i <= n ; i++){
+    
+        pwr = Math.pow( x , i);
+        
+        for ( int f = 1; f <= i; f++){
+        
+        factorial *= f;
+        
+        }
+        
+    keep = pwr / factorial;  
+    sum += keep;
+        
+    factorial = 1 ;    
+    
+    
+    }
+    
+    return sum;
+    
+    }
+```
+
+### Algorithm that calculate series of 1-1 / 3+1 / 5-1 / 7+1 / 9-1 / .... / n +- 1  n enter from keyboard
+``` java
+public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        System.out.println("Please enter the n value");
+        
+        int number = s.nextInt();
+        
+        if ( number % 2 == 0){
+        
+            System.out.println("Please enter the odd number. ");
+            System.exit(1);
+        }
+        
+        System.out.println( calculate (number));
+     
+    }
+    
+    public static double calculate ( int x){
+    
+    double sum =0 ;
+    
+    for ( int i = 1; i <= x; i += 4){
+    
+        sum += (i -1);
+    
+    }
+    for ( int i = 3; i <= x; i += 4){
+    
+        sum += (i+1);
+    } 
+    
+    
+    return sum;
+    } 
+```
+
+### Algorithm that calculate series of 1 - x^2  / 2! + x^4 / 4! - x^6 / 6! + x^8 / 8! / ...  +- x^n / n!  n enter form keyboard
+
+```java
+
+   //              this series calcutaing of cos(x)
+
+ public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        System.out.println("Please enter x value");
+        double number = s.nextDouble();
+        System.out.println("Please enter n value");
+        double number2 = s.nextDouble();
+        
+        System.out.println( calculate (number , number2));
+    }
+    
+    public static double calculate ( double x, double n){
+    
+    double sum = 1; 
+    double factorial = 1;
+    double pwr, keep;
+    
+    for ( int i = 2; i <= n; i += 4 ){
+    
+        pwr = Math.pow( x , i);
+        
+        for ( int f = 1; f <= n; f++){
+        
+            factorial *= f;
+        }
+        
+        keep = pwr/factorial;
+        factorial =1;
+        
+    sum -= keep;
+    
+    
+    }
+    
+    for ( int i = 4; i <= n; i += 4){
+    
+        pwr = Math.pow( x, i );
+        
+        for ( int f= 1; f <= n; f++){
+        
+            factorial *= f;
+        
+        }
+        
+        keep = pwr/factorial;
+        factorial =1; 
+        
+        sum += keep;
+    
+    }
+    
+    return sum;
+```
+
+### 
+
+
+
+
+
+
