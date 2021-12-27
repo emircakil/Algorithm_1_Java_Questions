@@ -766,7 +766,136 @@ public static void main(String[] args) {
         
     }
 ```
-### 
+### Algorithm that gives the following output
+'''java
+/*
+    computer
+    omputerc
+    mputerco
+    .
+    .
+    .
+    computer
+*/
+
+    public static void main(String[] args) {
+        
+        String word = "computer";
+        
+        char c [] = convert(word);
+        
+        swiftAndWrite(c);
+        
+    }
+        
+        public static void swiftAndWrite(char c[]){
+            
+        for ( int i =0 ; i < c.length;i++){
+    
+              System.out.print(c[i] + " ");
+        
+        }
+        System.out.println(" ");
+            
+            char keep = c[0];
+        
+        for ( int j =0 ; j < c.length; j++){ 
+           
+           keep = c[0];
+           
+        for ( int i = 0; i < c.length-1; i++){
+            
+           c[i] = c[i+1];
+           
+       }
+        
+       c[c.length-1] = keep;
+       
+        for ( int i =0 ; i < c.length; i++){
+            
+            System.out.print(c[i] + " ");
+        }
+        
+       System.out.println("");
+     
+       }
+
+    }
+            
+
+    public static char[] convert (String x){
+    
+    char c [] = new char [x.length()];
+    
+    for ( int i =0 ; i < x.length(); i++){
+    
+    c[i] = x.charAt(i);
+    
+    }
+    return c;
+
+    }
+
+'''
+
+###  Algotihm that sorts an int array from largest to smallest.
+```java
+public static int[] input(int x[]){
+    
+        Scanner s = new Scanner (System.in);
+        
+        for ( int i = 0; i < x.length; i++){
+        
+        x[i] = s.nextInt();
+        
+        }
+        toSort(x);
+        return x;
+        
+    }
+    
+    
+    public static void toSort(int x[]){
+        
+        int keep; 
+        
+        for ( int i =0 ; i < x.length;i++){
+        
+            for ( int j = i+1; j < x.length; j++){
+                
+                if ( x[j] > x[i]){
+                
+                keep = x[i];
+                x[i] = x[j];
+                x[j] = keep;
+                
+                }
+                
+            }
+        
+        }
+        output(x);
+        
+    } 
+    
+    
+    public static void output (int x[]){
+    
+        for ( int i = 0; i < x.length; i++){
+        
+            System.out.print(x[i] + " ");
+        }
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        int [] list = new int[10];
+        list = input(list);
+    
+    }
+
+```
 
 
 
