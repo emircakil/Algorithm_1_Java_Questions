@@ -1075,7 +1075,7 @@ public static void main(String[] args) {
     }
 ```
 
-### Half of the sum of the 1st and 2nd elements of a 50-element array is the first element of another array, and half of the sum of the 3rd and 4th elements is the 2nd element.
+### Half of the sum of the 1st and 2nd elements of a 10-element array is the first element of another array, and half of the sum of the 3rd and 4th elements is the 2nd element.
 
 ```java
 
@@ -1129,6 +1129,77 @@ public static void main(String[] args) {
 
 ```
 
+###    Algorithm that gives the transpose of a square matrix of type [2x2].
+
+```java
+ public static void main(String[] args) {
+        
+        String list[][] = { {"Emirhan" , "Cakil"}, {"Computer" , "Science"} };
+        
+        output(list);
+        
+    }
+    
+    public static String[][] output (String x[][]){
+    
+        for ( int i =0; i < x.length; i++){
+        
+            for ( int j =0; j < x[0].length; j++){
+            
+                System.out.print(x[j][i] + " ");
+            
+            }
+            System.out.println("");
+        }
+        
+        return x;
+    }
+
+
+```
+### Algorithm that sum of two matrix
+
+```java
+public static void main(String[] args) {
+  
+    int matrix1 [][] = {{1,2,3},{4,5,6},{7,8,9}};
+    int matrix2 [][] = {{1,2,3},{4,5,6},{7,8,9}};
+
+    sumOfMatrixs(matrix1, matrix2);
+    
+    }
+    
+    public static int[][] sumOfMatrixs ( int x[][] , int y[][]){
+    
+        int sums [][] = new int[3][3];
+        
+        for ( int i =0; i < x.length; i++){
+        
+            for (int j =0; j < x[0].length; j++){
+            
+                sums[i][j] = (x[i][j] + y[i][j]); 
+            }
+        }
+        output(sums);
+        
+        return sums;
+    
+    }
+    
+    public static void output ( int x [][] ){
+    
+        for (int i =0; i < x.length; i++){
+        
+            for ( int j =0; j< x[0].length; j++){
+                
+                System.out.print(x[i][j] + " ");
+            
+            }
+            System.out.println("");
+        }
+    
+    }
+```
+
+
 ### 
-
-
