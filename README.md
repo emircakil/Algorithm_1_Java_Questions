@@ -767,7 +767,8 @@ public static void main(String[] args) {
     }
 ```
 ### Algorithm that gives the following output
-'''java
+```java
+
 /*
     computer
     omputerc
@@ -836,7 +837,7 @@ public static void main(String[] args) {
 
     }
 
-'''
+```
 
 ###  Algotihm that sorts an int array from largest to smallest.
 ```java
@@ -897,6 +898,88 @@ public static int[] input(int x[]){
 
 ```
 
+###  Algortihm that sum of two binary number
+```java
+public static double[] convertDecimal ( String x, String y){
+   
+   int sumX = 0, sumY = 0;
+   double decimal[] = new double[2]; 
+    
+    for ( int i =0, j = x.length()-1; i < x.length(); i++, j--){
+    
+        if ( x.charAt(i) == '1' ){
+        
+            sumX += Math.pow(2 , j);
+            
+        }
+        
+    }
+    for ( int i =0 , j = y.length()-1; i < y.length(); i++, j--){
+    
+        if ( y.charAt(i) == '1'){
+            
+            sumY += Math.pow(2 , j);
+        }
+    }
+    
+    decimal[0] = sumX;
+    decimal[1] = sumY;
+    
+    convertBinary(sumX+sumY);
+    
+    return decimal;
+    }
+    
+    public static void convertBinary(int x){
+    
+    int counter = 0;
+    int keep = x;
+        
+    while ( keep > 0 ){
+    
+        keep /= 2;
+        counter++;
+    }
+    
+    char bnry [] = new char [counter];
+    keep = x;
+    
+    for ( int i =0; i < bnry.length; i++){
+    
+        keep = x % 2;
+        x /= 2;
+        
+        if ( keep == 0 ){
+        
+            bnry[i] = '0';
+        }
+        else {
+            bnry[i] = '1';
+        }
+    }
+    
+    output(bnry);
+    
+    }
+    
+    public static void output( char x[]){
+    
+    for ( int i =x.length-1; i >=0; i--){
+    
+        System.out.print(x[i] + " ");
+    
+    }
+    }
+
+    public static void main(String[] args) {
+        
+        String twentyThree = "10111";
+        String nine = "1001";
+        
+        convertDecimal(twentyThree , nine);
+    }
+
+```
 
 
 
