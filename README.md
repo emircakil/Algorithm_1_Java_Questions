@@ -1075,3 +1075,60 @@ public static void main(String[] args) {
     }
 ```
 
+### Half of the sum of the 1st and 2nd elements of a 50-element array is the first element of another array, and half of the sum of the 3rd and 4th elements is the 2nd element.
+
+```java
+
+public static void main(String[] args) {
+        
+        int list [] = new int [10];
+
+        elementsOfList(list);
+        
+    }
+    
+    public static int[] elementsOfList (int x[]){
+    
+        Scanner s = new Scanner(System.in);
+        
+        for ( int i =0; i < x.length; i++ ){
+        
+            x[i] = s.nextInt();
+        }
+        
+        sumAndAssign(x);
+        
+        return x;
+    }
+    
+    public static void sumAndAssign ( int x[]){
+        
+        int sum =0;
+        int lastArray [] = new int[x.length/2];
+    
+    for ( int i =0 , j = 1, c =0;  i < x.length; i += 2, j +=2, c++ ){
+        
+        sum += (x[i] + x[j])/2;
+        
+        lastArray[c] = sum;
+        
+        sum = 0;
+    }
+        
+        output(lastArray);
+    }
+    
+    public static void output ( int x[]){
+    
+    for ( int i =0; i < x.length; i++){
+        
+            System.out.println(x[i]);
+        }
+    
+    }
+
+```
+
+### 
+
+
