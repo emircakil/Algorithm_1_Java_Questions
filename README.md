@@ -981,7 +981,97 @@ public static double[] convertDecimal ( String x, String y){
 
 ```
 
+### Algorithm that shifts it back to the beginning by removing the ones other than the first written number of the repeated numbers in a 7-element number array with the element values given.
 
+```java 
+public static void main(String[] args) {
+        
+        int list [] = {10 , 20, 30, 40 , 30 , 20 , 50};
+        
+        swift(list);
+        
+    }
 
+    public static int[] swift ( int x[] ){
+    
+    int keep , counter=0;
+        
+    for ( int i = 0; i < x.length; i++){
+        
+        for ( int j = i+1; j < x.length; j++){
+      
+            
+            if ( x[i] == x[j]){
+                
+                keep = x[j];
+                        
+                for (int s = j; s >counter; s--){
+   
+                    x[s] = x[s-1];
+                }
+                
+                x[counter] = keep;
+                counter++;
+            }
+        }
+    }
+    
+    output(x);
+    
+    return x;
+    }
+    
+    public static void output ( int x[]){
+    
+        for ( int i =0; i < x.length; i++ ){
+        
+            System.out.println(x[i]);
+        }
+    
+    }
+    
+```
 
+### Algorithm that finding how much one digit, how much two digit, how much three digit of number array
+
+```java
+public static void main(String[] args) {
+        
+        int list [] = { 10 , 100, 1, 200, 20};
+        
+        find(list);
+        
+    }
+    
+    public static int [] find ( int x[]){
+        
+    int counter =0, keep;  
+    int digits [] = new int [x.length];
+        for ( int i = 0; i < x.length; i++){
+            
+            keep = x[i];
+            
+            while ( x[i] > 0){
+            
+            x[i] /= 10;
+            counter++;
+            
+            }
+            
+        digits[i] = counter;
+        counter = 0;
+        x[i] = keep;
+        }
+        output(digits);
+        return digits;
+    }
+    public static void output (int x[]){
+    
+        for ( int i =0; i < x.length; i++){
+        
+            System.out.println(" Digit of element " + (i+1) + " = " + x[i] );
+        }
+    
+    }
+```
 
