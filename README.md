@@ -1202,4 +1202,189 @@ public static void main(String[] args) {
 ```
 
 
+### Algorithm that convert two dimensional array to one dimensional array
+
+```java
+public static void main(String[] args) {
+        
+        int matrix[][] = {{1,2,3},{4,5,6}};
+        
+        convert(matrix);
+    }
+    
+    public static int[] convert(int x [][]){
+    
+        int lng = (x.length * x[0].length);
+        
+        int counter =0;
+        
+        int single[] = new int [lng];
+    
+        for ( int i =0; i < x.length; i++){
+        
+            for ( int j = 0; j < x[0].length; j++){
+
+                 single[counter] = x[i][j];
+                 counter++;
+            }
+        }
+        output(single);
+        
+        return single;
+    }
+    
+    public static void output( int x[]){
+    
+        for (int i =0; i < x.length; i++){
+        
+            System.out.println(x[i]);
+        }
+    }
+```
+
+### Algorihm that finding number index of an integer array with sequantial search.
+
+```java
+
+public static void main(String[] args) {
+        
+        int list [] = { 10, 20, 30 ,40 , 50 ,60 ,70 , 80 ,90 ,100};
+        
+        output( find(list) );
+    }
+    
+    public static int find( int x[]){
+    
+        Scanner s = new Scanner(System.in);
+        
+        int f = s.nextInt();
+        
+        for ( int i =0; i < x.length; i++){
+        
+            if ( f == x[i]){
+            
+                return (i+1);
+            
+            }
+           
+        }
+        
+        return 0;
+    }
+    
+    public static void output( int x){
+    
+        if ( x== 0){
+            System.out.println("Array doesn't have this element");
+        }
+        else {
+            System.out.println("array has element index of " + x);
+        }
+    }
+```
+
+### Algorithm that find number of an integer array with binary search.  
+
+```java
+public static void main(String[] args) {
+        
+        int list [] = {1 , 10, 5, 8 , 6 , 5, 3, 2, 1, 20};
+        
+        convertSeries(list);    
+        }
+    
+    public static int[] convertSeries( int x[]){
+    
+        int keep;
+        
+        for ( int i =0; i < x.length; i++){
+        
+            for ( int j = i+1; j < x.length; j++){
+            
+                if ( x[i] < x[j]){
+                
+                    keep = x[i];
+                    x[i] = x[j];
+                    x[j] = keep;
+                }
+            }
+        }
+        
+        check(x);
+        return x;
+    }
+    
+    public static void check (int x [] ){
+    
+        Scanner s = new Scanner (System.in);
+        
+        int f = s.nextInt();
+        
+        boolean condition = true;
+        
+        for ( int i = 0; i < x.length; i++ ){
+   
+            if ( f == x[i]){
+            
+                condition = false;
+            }
+        }
+        
+        if ( condition == false){
+        
+            find(x,f);
+        }
+        else {
+            output(-1);
+        }
+        }
+        
+       public static void find (int x[], int f){
+  
+        boolean condition = false;
+                
+        int floor = 0, ceiling = x.length, counter =0;
+        int keep ;
+    
+        for ( int i =0 ; i < x.length; i++){
+            
+            keep = (floor+ceiling)/2;
+            
+            if ( f < x[keep]){
+                
+                floor = keep;
+                counter++;
+            }
+            else if ( f > x[keep]){
+                
+                ceiling = keep;
+                counter++;
+            }
+            else {
+                condition = true;
+            }
+        
+        
+        }
+        
+        if ( condition == true){
+            
+             output(counter);
+        }
+        
+        }  
+    
+    
+    public static void output( int x){
+    
+        if ( x == -1){
+            System.out.println("This number doesn`t have array");
+        }
+        else {
+        System.out.println("Number finding try of " + (x+1));
+        }
+    }
+
+```
+
 ### 
