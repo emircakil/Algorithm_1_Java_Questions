@@ -1387,4 +1387,150 @@ public static void main(String[] args) {
 
 ```
 
-### 
+### Write algorithm of selection sort.
+
+```java
+public static void main(String[] args) {
+        
+        int list [] = new int[10];
+        
+        input(list);
+    }
+    
+    public static int[] input(int x[]){
+    
+        Scanner s = new Scanner(System.in);
+        
+        for( int i =0; i < x.length; i++){
+        
+            x[i] = s.nextInt();
+        }
+        selectionSort(x);
+        
+        return x;
+    }
+    
+    public static void selectionSort ( int x[] ){
+    
+        int keep ;
+        
+        for ( int i = 0 ; i < x.length; i++){
+        
+            for ( int j = i+1; j < x.length; j++ ){
+            
+                if ( x[i] < x[j]){
+                    
+                    keep = x[i];
+                    x[i] = x[j];
+                    x[j] = keep;
+                
+                }
+            }
+        }
+        
+        output(x);
+    }
+    public static void output( int x []){
+        
+        for ( int i =0 ; i < x.length; i++){
+        
+            System.out.print(x[i] + " ");
+        }
+    
+    }
+```
+### Write algorithm of bubble sort.
+
+```java
+public static void main(String[] args) {
+        
+        int x [] = new int [10];
+        
+        input(x);
+    }
+    
+    public static int[] input( int x[]){
+    
+        Scanner s = new Scanner(System.in);
+        
+        for( int i = 0; i< x.length; i++){
+        
+            x[i] = s.nextInt();
+        
+        }
+        bubble(x);
+        
+        return x;
+    }
+    
+    public static void bubble(int x[]){
+        
+        int keep;
+    
+    for ( int i =0; i < x.length;i++){
+    
+        for ( int j = 0; j < x.length-1; j++){
+        
+            if ( x[j] > x[j+1] ){
+            
+                keep = x[j];
+                x[j] = x[j+1];
+                x[j+1] = keep;
+            }
+        }
+    }
+    
+        output(x);
+    }
+    
+    public static void output(int x[]){
+    
+        for ( int i =0; i< x.length; i++){
+        
+            System.out.print(x[i] + " ");
+        }
+    }
+
+```
+
+### Write algorithm of insertion sort.
+```java
+ public static void main(String[] args) {
+        
+        int list [] = { 10, 4, 7, 9, 11, 15, 3, 2}; 
+        
+        insertionSort(list);
+    }
+    
+    public static int[] insertionSort(int x[]){
+        
+        int keep;
+        
+        for ( int i = 1; i < x.length; i++ ){
+    
+            for ( int j = 0; j < i; j++ ){
+            
+                if ( x[i] < x[j]){
+                
+                    keep = x[i];
+                    x[i] = x[j];
+                    x[j] = keep;
+                }
+            }
+    
+    }
+        output(x);
+        return x;
+    }
+    public static void output(int x[]){
+    
+        for ( int i =0; i < x.length; i++){
+            
+            System.out.println(x[i]);
+        }
+    }
+```
+
+
+
+
