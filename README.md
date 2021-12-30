@@ -21,7 +21,9 @@
 ### Algorithm that calculate divison operation using extraction operation.
 
 ```java
-    int dividing = 10;
+   public static void main(String[] args) {
+   
+        int dividing = 10;
         int dividing2 = 2;
         int counter = 0; 
         
