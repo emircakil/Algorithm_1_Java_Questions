@@ -1633,7 +1633,8 @@ public static void main(String[] args) {
 
         Random r = new Random();
 
-        int rnd = r.nextInt(4) + 1;
+        int rnd;
+        int names;
 
         int counter = 0;
         int finishCounter = 0;
@@ -1641,11 +1642,13 @@ public static void main(String[] args) {
         while (finishCounter < 10) {
 
             rnd = r.nextInt(4) + 1;
+            
 
             for (int i = 0; i < rnd; i++) {
 
-                System.out.print(x[counter] + " ");
-                counter++;
+                names = r.nextInt (40)+1;
+                System.out.print(x[names] + " ");
+                
             }
             finishCounter++;
             System.out.println(" ");
@@ -1656,5 +1659,141 @@ public static void main(String[] args) {
     }
 ```
 
-###
+### Createing 100 8-letter passaword using English alphabet with lower case and 0-9 numbers.
+
+```java
+public static void main(String[] args) {
+
+        String list[] = new String[100];
+
+        elements(list);
+
+        print(list);
+    }
+
+    public static String[] elements(String[] x) {
+
+        Random r = new Random();
+
+        int trueOrFalse;
+        int keepNum;
+        int rndChar;
+        char keepChar;
+
+        String keep = "";
+
+        for (int j = 0; j < x.length; j++) {
+
+            for (int i = 0; i < 8; i++) {
+
+                trueOrFalse = r.nextInt(2);
+                keepNum = r.nextInt(10);
+                rndChar = r.nextInt(123 - 97) + 97;
+                keepChar = ((char) rndChar);
+
+                if (trueOrFalse == 0) {
+
+                    keep += keepChar;
+                } else {
+                    keep += keepNum;
+                }
+            }
+
+            x[j] = keep;
+            keep = "";
+
+        }
+
+        return x;
+    }
+
+    public static void print(String x[]) {
+
+        int counter = 0;
+
+        for (int i = 0; i < x.length; i++) {
+
+            counter++;
+            System.out.println(counter + " " + x[i]);
+
+        }
+    }
+
+
+```
+### 100 strings are entered from the keyboard and these strings are combined. 20 words with 5 letters are randomly generated from these 100 strings. algorithm that prints the equal of these 20 words to the screen.
+
+```java
+public static void main(String[] args) {
+
+        String longString = "";
+
+        longString = elements(longString);
+
+        elementsOfList(longString);
+    }
+
+    public static String elements(String x) {
+
+        Scanner s = new Scanner(System.in);
+
+        for (int i = 0; i < 100; i++) {
+
+            x += s.next();
+        }
+
+        return x;
+    }
+
+    public static void elementsOfList(String x) {
+
+        Random r = new Random();
+
+        String list[] = new String[20];
+        String keep = "";
+
+        int rnd;
+
+        for (int i = 0; i < list.length; i++) {
+
+            rnd = r.nextInt(x.length() - 4);
+
+            for (int j = rnd; j < rnd + 5; j++) {
+
+                keep += x.charAt(j);
+            }
+            list[i] = keep;
+            keep = "";
+        }
+        allPrint(list);
+        check(list);
+    }
+
+    public static void allPrint(String[] x) {
+
+        for (int i = 0; i < x.length; i++) {
+
+            System.out.println(x[i]);
+            
+            // that method generated for checking list.
+        }
+    }
+
+    public static void check(String[] x) {
+
+        for (int i = 0; i < x.length; i++) {
+
+            for (int j = i + 1; j < x.length; j++) {
+
+                if (x[i].equals(x[j])) {
+
+                    System.out.println("same elements of random list =" + x[i]);
+                }
+            }
+        }
+    }
+```
+
+### 
+
 
