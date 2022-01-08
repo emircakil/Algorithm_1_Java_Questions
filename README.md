@@ -1595,6 +1595,52 @@ public static void main(String[] args) {
     }
 ```
 
+### Creating 100 8-letter passaword using English alphabet with lower case and 0-9 numbers.
 
+```java
+public static void main(String[] args) {
 
+        String list[] = new String[100];
+
+        elements(list);
+
+        print(list);
+    }
+
+    public static String[] elements(String[] x) {
+
+        Random r = new Random();
+
+        int trueOrFalse;
+        int keepNum;
+        int rndChar;
+        char keepChar;
+
+        String keep = "";
+
+        for (int j = 0; j < x.length; j++) {
+
+            for (int i = 0; i < 8; i++) {
+
+                trueOrFalse = r.nextInt(2);
+                keepNum = r.nextInt(10);
+                rndChar = r.nextInt(123 - 97) + 97;
+                keepChar = ((char) rndChar);
+
+                if (trueOrFalse == 0) {
+
+                    keep += keepChar;
+                } else {
+                    keep += keepNum;
+                }
+            }
+
+            x[j] = keep;
+            keep = "";
+
+        }
+
+        return x;
+    }
+```
 
