@@ -1532,7 +1532,129 @@ public static void main(String[] args) {
         }
     }
 ```
+### Strings are entered from keyboard. The method that converts these strings to 10 4-letter words.
 
+```java
 
+    public static void main(String[] args) {
 
+        char c[] = new char[40];
+
+        sideBySide(c);
+    }
+
+    public static void sideBySide(char c[]) {
+
+        Scanner s = new Scanner(System.in);
+
+        int charCounter = 0;
+
+        for (;;) {
+
+            String word = s.next();
+
+            for (int i = 0; i < word.length(); i++) {
+
+                if (word.charAt(i) != ' ') {
+
+                    c[charCounter] = word.charAt(i);
+
+                    charCounter++;
+
+                    if (charCounter >= 40) {
+
+                        print(c);
+                        System.exit(1);
+                    }
+                }
+            }
+        }
+    }
+
+    public static void print(char c[]) {
+
+        int counter = 0;
+
+        for (;;) {
+
+            for (int j = 0; j < 4; j++) {
+
+                System.out.print(c[counter]);
+
+                counter++;
+
+                if (counter == 40) {
+
+                    System.out.println(" ");
+                    System.exit(0);
+                }
+            }
+            
+            System.out.print(" ");
+        }
+    }
+```
+
+### Strings are entered from keyboard. The method that converts these strings to 10 sentences with 4 words.
+
+```java
+
+ public static void main(String[] args) {
+
+        String list[] = new String[40];
+
+        elements(list);
+
+    }
+
+    public static void elements(String x[]) {
+
+        Scanner s = new Scanner(System.in);
+
+        int i = 0;
+
+        for (;;) {
+
+            x[i] = s.next();
+            i++;
+
+            if (i == x.length) {
+
+                print(x);
+                System.exit(1);
+
+            }
+
+        }
+
+    }
+
+    public static void print(String x[]) {
+
+        Random r = new Random();
+
+        int rnd = r.nextInt(4) + 1;
+
+        int counter = 0;
+        int finishCounter = 0;
+
+        while (finishCounter < 10) {
+
+            rnd = r.nextInt(4) + 1;
+
+            for (int i = 0; i < rnd; i++) {
+
+                System.out.print(x[counter] + " ");
+                counter++;
+            }
+            finishCounter++;
+            System.out.println(" ");
+
+        }
+
+        System.exit(0);
+    }
+```
+
+###
 
