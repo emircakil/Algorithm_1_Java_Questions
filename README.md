@@ -1643,4 +1643,60 @@ public static void main(String[] args) {
         return x;
     }
 ```
+### Algorithm that check symmetrical or not of matrix.
 
+```java
+
+public static void main(String[] args) {
+
+        int list[][] = {{1, 3, 3, 3, 1},
+                        {2, 5, 5, 5, 2},
+                        {1, 3, 3, 3, 1}};
+
+        boolean c = check(list);
+
+        print(c);
+    }
+
+    public static boolean check(int x[][]) {
+
+        boolean condition = true;
+
+        for (int i = 0; i < x.length; i++) {
+
+            for (int f = 0, l = x[0].length - 1; f < x[0].length; f++, l--) {
+
+                if (x[i][f] != x[i][l]) {
+
+                    condition = false;
+                }
+
+            }
+        }
+
+        for (int s = 0, f = x.length - 1; s < x.length; s++, f--) {
+
+            for (int i = 0; i < x[0].length; i++) {
+
+                if (x[s][i] != x[f][i]) {
+
+                    condition = false;
+                }
+            }
+        }
+
+        return condition;
+    }
+
+    public static void print(boolean condition) {
+
+        if (condition == true) {
+
+            System.out.println("Matrix is symmetrical");
+        } else {
+
+            System.out.println("Matrinx isn't symmetrical");
+        }
+
+    }
+```
