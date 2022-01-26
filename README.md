@@ -1700,3 +1700,1834 @@ public static void main(String[] args) {
 
     }
 ```
+
+### Write a method that returns the sum of two integers that comes as a parameter
+
+```java
+    
+    public static int sum (int x , int y){
+    
+        return (x+y);
+   
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s  = new Scanner(System.in);
+        
+        int number1 = s.nextInt();
+        int number2 = s.nextInt();
+        
+        System.out.println(sum(number1,number2));
+        
+        
+        
+    }
+    
+}
+```
+
+### Write method that returns the power of one integer other integer that comes as a parameter
+
+```java
+public class question2 {
+    
+    public static int pwr (int x , int y) {
+    
+        int c = (int) Math.pow(x,y);
+        
+    return c;
+    
+    
+    }
+    
+    
+    public static void main(String[] args){
+    
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Please write one number.");
+        int number1 = s.nextInt();
+        System.out.println("Please write power of number.");
+        int number2 = s.nextInt();
+        
+        System.out.println("Result = " + pwr(number1,number2));
+    }
+}
+```
+### Write method show your name until number n that comes as a parameter
+
+```java
+public static void show(int x){
+    
+    for ( int i = 1 ; i <= x; i++){
+    
+        System.out.println("Emirhan Aydin Cakil");
+    
+    }
+    
+    
+    }
+    
+    public static void main(String[] args){
+    
+        Scanner s= new Scanner(System.in);
+        
+        int number = s.nextInt();
+        
+        show(number);
+    
+    }
+ ```
+ ### Write method that return the how much digits of integer that comes as a parameter
+```java
+ public static int digit ( int x){
+    
+        int counter =0;
+        
+        while ( x > 0){
+        
+            counter++;
+            
+            x /= 10;
+        
+        }
+    
+    return counter;
+    
+        
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        int number = s.nextInt();
+        
+        System.out.println(digit(number));
+        
+    }
+
+```
+### Write method that return what equals is nth of fibonacci sequence that comes as a paramter
+
+```java
+ublic static int fibonacci ( int x){
+    
+        int a = 1;
+        int b = 1; 
+        int c =0;
+        
+        if ( x == 1 &&  x == 2){
+            return 1;
+        }
+        
+        
+        for ( int i = 3 ; i <= x ; i++){
+        
+         c = a + b;
+         a = b;
+         b = c;
+        
+        
+        }
+    
+    return c;
+    
+    
+    }
+    
+    public static void main(String[] args){
+    
+    Scanner s = new Scanner(System.in);
+    
+    int n = s.nextInt();
+    
+    System.out.println(fibonacci(n));
+    
+    }
+```
+
+### Write a method that return the factorial of integer that comes to it as a paramter
+
+```java
+public static int factorial (int x){
+    
+    int fct =1 ;
+    
+        for ( int i =1 ; i <= x; i++){
+        
+        fct *= i;
+        
+        }
+    
+    return fct;
+    
+    
+    
+    }
+    
+    
+    
+    public static void main(String[] args) {
+       
+        Scanner s = new Scanner(System.in);
+        
+        int number = s.nextInt();
+        
+       System.out.println( factorial(number));
+        
+    }
+```
+
+### Write method that return sum of all integer integer entered from keyboard that comes to is as parameter
+```java
+public static int sumOfAll (int x){
+    
+    int sum = 0; 
+    
+        for ( int i = 1; i < x ; i++){
+        
+        sum += i;
+        
+        
+        
+        }
+    
+        return sum;
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        int number = s.nextInt();
+        
+       System.out.println( sumOfAll(number) );
+    }
+```
+
+### Write a method that return finding bigger of two integer that comes to it as parameter
+```java
+public static int bigger ( int x , int y){
+    
+        int big =0;
+        
+    if ( x > y){
+        
+        big =x;
+    
+    }
+    else{
+    
+        big = y;
+    }
+    
+    return big;
+    
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        System.out.println(bigger (4,5));
+        
+    }
+```
+
+### Write method that return finding lower case in a string that comes to it as parameter
+```java
+public static int lowerCase ( String x){
+    
+    int counter = 0;
+    
+    for ( int i =0 ;  i < x.length(); i++){
+    
+        if ( x.charAt(i) >= 'a' && x.charAt(i) <= 'z'){
+        
+        counter++;
+        
+        }
+    
+    }
+    
+    return counter;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        String word = "Emirhan Aydin Cakil";
+        
+        System.out.println(lowerCase(word));
+    }
+```
+### Write method that return lower cases converting to upper cases and upper cases converting to lower cases of a string that comes to it as parameter
+
+```java
+ public static String convert ( String x){
+    
+        String nw = "";
+        
+        for ( int i =0 ; i < x.length(); i++){
+     
+            if ( x.charAt(i) >= 'a' && x.charAt(i) <= 'z'){
+            
+                char c = x.charAt(i);
+                String word = String.valueOf(c);
+                nw += word.toUpperCase();
+            }
+            else {
+                char c = x.charAt(i);
+                String word = String.valueOf(c);
+                nw += word.toLowerCase();
+            }
+        
+    
+        }
+    return nw;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        String sentence = "eMIRHAN aYDIN cAKIL";
+        
+        System.out.println(convert(sentence));
+        
+    }
+```
+
+### Write method that return finding how much "aa" terms of a string that comes to it as parameter
+```java
+public static int findAA ( String x ){
+    
+    int counter =0 ;
+    
+    for ( int i = 0 ; i < x.length()-1; i++){
+    
+        if ( x.charAt(i) == 'a' && x.charAt(i+1) == 'a' ){
+        
+            counter++;
+        }
+    
+    }
+    
+    return counter;
+    
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        
+        String word = "aa bb cc aa ee dd aaa";
+        
+        System.out.println(findAA(word));
+    }
+    
+```
+
+### Write method that return finding bigger of length of two string that comes to it as parameter
+
+```java
+public static boolean biggerOfStrings(String x , String y ){
+     
+    if ( x.length() > y.length()){
+    
+        return true;
+    
+    }
+    
+    return false;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        String sentence1 = "Emirhan Aydin Cakil";
+        String sentence2 = "Emirhan Aydin";
+        
+        boolean condition = biggerOfStrings(sentence1, sentence2);
+        
+        if ( condition == true){
+        
+                System.out.println("String 1 bigger than String 2");
+        }
+        else {
+                System.out.println("String 1 smaller than String 2");
+        }
+        
+    }
+```
+
+### Write metod that return how much word of a string that comes to it as parameter
+```java
+public static int wordCount ( String x ){
+    
+        int counter = 1 ;
+        
+        for ( int i =0 ; i < x.length(); i++){
+        
+            if ( x.charAt(i) == ' ' ){
+            
+                counter++;
+            
+            }
+        
+        
+        }
+        
+    return counter;
+    
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        String sentence = "Emirhan Aydin Cakil";
+        
+       System.out.println( wordCount(sentence) );
+        
+    }
+```
+
+### Write metod that return finding whether 'a' terms in a string that comes to it as parameter
+```java
+public static boolean findA ( String x ){
+    
+    
+        
+        for ( int i = 0; i < x.length(); i++){
+        
+            if ( x.charAt(i) == 'a'){
+            
+                return true;
+            }
+        
+        
+        }
+    return false;
+    
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        String sentence = s.nextLine();
+        
+        boolean condition = findA(sentence);
+        
+        if ( condition == true){
+        
+            System.out.println("String has character a");
+        
+        }
+        else {
+        
+            System.out.println("String hasn't character a");
+        }
+```
+
+### Write method that return whether polindrome or not that comes to it as parameter
+```java
+
+public static boolean polindromeCheck ( String x ) {
+    
+       
+        
+        for ( int i = 0 , j = x.length()-1 ; i < x.length() ; i++ , j--){
+        
+          
+            
+                if ( x.charAt(i) != x.charAt(j)){
+                    
+                    return false;
+                
+                }
+    
+        }
+        
+        return true;
+           
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        String word = s.next();
+        
+        boolean a = polindromeCheck(word);
+        
+        if ( a == false){
+        
+                System.out.println("String isn't a polindrome");
+        }
+        else {
+                System.out.println("String is a polindrome");
+        }
+        
+    }
+```
+
+### Write metod that return sum of array of integer that comes to it as parameter
+```java
+
+public static int sumOfArray(int []x){
+    
+        int top = 0 ;
+        
+        for ( int i = 0 ; i < x.length; i++){
+        
+            top += i;
+        
+        }
+    
+        return top;
+    
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        int list [] = {1,2,3,4,5,6,7,8,9,10};
+        
+       System.out.println( sumOfArray(list) );
+        
+    }
+    
+```
+
+###  Write method that return indis of lowest integer of the integer array that comes to it as parameter
+```java
+ public static int findLowest ( int x []){
+    
+        int smallest = x[0];
+        int index = 0;
+        
+        for ( int i =0 ; i< x.length; i++){
+        
+            if ( smallest > x[i]){
+            
+                smallest = x[i];
+                index = i+1;
+            }
+        }
+    
+        return index;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        int list [] = { 10 ,1 , 20, -10 , 30};
+        
+        System.out.println("index of smallest element =" +findLowest(list));
+        
+    }
+```
+### Write metod that return checikng whether elements serial of integer array that comes to it as parameter
+```java
+
+public static boolean checkSerial ( int [] x){
+    
+        for ( int i = 0 ; i < x.length-1 ; i++ ){
+        
+            if ( x[i] > x[i+1]){
+        
+            return false;
+        }
+        
+        }
+    
+    return true;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s= new Scanner ( System.in);
+        
+        int list [] = new int[5];
+        
+        for ( int i = 0 ; i < list.length; i++){
+        
+        list[i] = s.nextInt();
+        }
+        
+        boolean condition = checkSerial(list);
+        
+        if ( condition == true){
+        
+            System.out.println("Array is an serial array");
+        }
+        else {
+            System.out.println("Array isn't an serial array");
+        }
+```
+### Write metod that return plus one to all elements of integer array that comes to it as paramaeter
+
+```java
+public static int[] plusOne(int[] x){
+    
+        for ( int i =0 ; i < x.length; i++){
+        
+            x[i]++;
+        }
+    
+        return x;
+    }
+    
+    public static void main(String[] args) {
+        
+        int [] list = {10, 20, 30, 40, 50, 60 ,70, 80 , 90 ,100};
+        
+        list = plusOne(list);
+        
+        for ( int i =0 ; i < list.length; i++){
+        
+            System.out.println(list[i]);
+        }
+        
+    }
+```
+
+### Write method that return index of longest string of string array that comes to it as a parameter
+```java
+ public static int findLongest(String [] x){
+    
+        int length = x[0].length();
+        int index = 0;
+        
+        
+        for (int i = 0 ; i < x.length; i++){
+            
+           
+             if ( length < x[i].length()){
+                 
+                 index =i;
+             
+            }
+        
+        }
+    
+        return index;
+    }
+    
+    public static void main(String[] args){
+    
+    String list[] = {"Emirhan" , "Aydin", "Cakil"};
+    
+        System.out.println("indis of longest string = " + findLongest(list) );
+    
+    }
+ ```
+ ### Write method that return second largest number of integer array that comes to it as a parameter
+ ```java
+  public static int find ( int[] x){
+    
+        
+        int keep;
+        
+        for (int i =0 ; i < x.length; i++){
+        
+            for ( int j = i+1 ; j < x.length; j++){
+        if ( x[i] < x[j]){
+            
+            keep = x[i];
+            x[i] = x[j];
+            x[j] = keep;
+            
+        
+                    
+                    }
+            }
+            
+        }
+        
+        return x[1];
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s= new Scanner (System.in);
+        
+        int [] list= new int [5];
+        
+        for ( int i = 0 ; i < list.length; i++){
+        
+            list[i] = s.nextInt();
+        }
+        
+       System.out.println( "En buyuk 2. eleman =" + find (list) );
+        
+        
+    }
+ ```
+ 
+ ### Write method that return finding smallest and biggest elements of integer array that comes to it as a parameter
+ ```java
+  public static int[] find ( int[] x){
+    
+        int smallest = x[0], biggest = x[0];
+        int [] rtrn = new int[2];
+        
+        for ( int i =0 ; i < x.length; i++){
+        
+            if ( biggest < x[i]){
+            
+                biggest = x[i];
+            }
+            if ( smallest > x[i]){
+            
+                smallest = x[i];
+                
+            }
+        }
+        
+        rtrn[0] = biggest;
+        rtrn[1] = smallest;
+        
+        return rtrn;
+    
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        int list [] = new int [5];
+        
+        
+        for ( int i = 0 ; i < list.length; i++){
+        
+            list[i] = s.nextInt();
+        
+        }
+        System.out.println("Biggest element of array = " + find(list)[0]);
+        System.out.println("Lowest element of arrat = " + find(list)[1]);
+        
+        
+    }
+ ```
+ ###  Write method that returns calculate average of midterm and final exams of two arrays that comes to it as a parameter
+ 
+ ```java
+   public static int [] calculateAverage ( int []x , int []y){
+    
+        int [] averages = new int [3];
+        
+        for ( int i =0; i < averages.length; i++){
+        
+            averages[i] = ((x[i]*40 )+ (y[i]*60))/100;
+        
+        }
+    
+        return averages;
+    }
+    
+    public static void main(String[] args) {
+        
+        int midterms [] = {15 , 58 , 50};
+        int f1nals [] = { 100 , 50, 8};
+        
+        for ( int i =0 ; i < midterms.length; i++){
+        
+            System.out.println(calculateAverage ( midterms, f1nals)[i]);
+            
+        
+        }
+    }
+```
+###  write method that returns finding biggest element of double dimensional array that comes to it as a parameter
+###                                that returns index of biggest element
+###                               that returns sum of each rows                               
+```java
+ public static int biggest( int x [][]){
+    
+        int big = x[0][0];
+    
+        for ( int i =0 ; i < x.length; i++){
+            for ( int j = 0 ; j < x[0].length; j++ ){
+            
+                if ( x[i][j] > big){
+                
+                    big = x[i][j];
+                
+                }
+            
+            
+            }
+        }
+      
+        
+        return big;
+    
+    }
+    
+    public static int[] index ( int x[][]){
+        
+        int big = x[0][0];
+        int index1 =0, index2=0;
+        int ind [] = new int [2];
+        
+        for ( int i =0 ; i < x.length; i++){
+            for ( int j = 0 ; j < x[0].length; j++ ){
+            
+                if ( x[i][j] > big){
+                
+                    big = x[i][j];
+                    index1 = i;
+                    index2 = j;
+                }
+            
+            
+            }
+        }
+       ind [0] = index1;
+       ind [1] = index2;
+        
+        return ind;
+    
+    }
+    
+    public static int[] sumOfRows (int x[][]){
+    
+        int sum = 0 ;
+        int sumRows [] = new int[2];
+        
+        for ( int i = 0 ; i < x.length; i++){
+            for ( int j = 0; j < x[0].length; j++){
+            
+                sum += x[i][j];
+                sumRows [i] = sum;
+            }
+            sum =0;
+        
+        }
+        
+        return sumRows;
+    
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner ( System.in );
+        
+        int twoDimensional[][] = new int [2][2];
+        
+        for ( int  i = 0 ; i < twoDimensional.length; i++ ){
+        
+            for ( int j = 0 ; j < twoDimensional[0].length; j++){
+            
+            twoDimensional[i][j] = s.nextInt();
+            
+            }
+        }
+        
+        System.out.println("Biggest element of double dimensional array =" + biggest(twoDimensional) );
+        System.out.println("Index of biggest element of double dimensional array =" + index(twoDimensional)[0] + " " +index(twoDimensional)[1]);
+        
+        for ( int i = 0 ; i < 2; i++){
+            
+        System.out.println("Sum of "+ i +". rows of double dimensional array =" + sumOfRows(twoDimensional)[i]);
+        
+        }
+    
+    }
+ ```
+ ### Write method this return longest string of double dimensional array that comes to it as a parameter
+ ```java
+ public static String longest ( String x [][]){
+    
+        int lng = x[0][0].length(); 
+        String word = "";
+        
+        for ( int i = 0 ; i < x.length; i++){
+        
+            for ( int j = 0 ; j < x[0].length; j++){
+            
+                if ( lng < x[i][j].length()){
+                
+                    lng = x[i][j].length();
+                    word = x[i][j];
+                }
+            
+            
+            }
+        
+        }
+    
+        return word;
+    
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        String str [][] = { {"Emirhan" , "Aydin" , "Cakil"},
+                            {"Wesley", "Benjamin", "Sneijder"},
+                            {"Sokrates" , "Platon" , "Descardes"}}; 
+        
+        System.out.println(longest(str));
+    }
+ ```
+ ### Write method that return sum of 3x3 matrix that comes to it as a parameter
+ ```java
+  public static int sumOfMatrix ( int x [][]){
+    
+        int sum = 0; 
+        
+        for ( int i = 0 ; i < x.length; i++){
+            
+            for ( int j= 0 ; j < x[0].length; j++){
+            
+                sum += x[i][j];
+            
+            }
+        }
+    
+        return sum;
+    
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        int matrix[][] = new int [3][3];
+        
+        for ( int i = 0 ; i < matrix.length; i++){
+        
+            for ( int j = 0 ; j < matrix[0].length; j++){
+            
+            matrix [i][j] = s.nextInt();
+            }
+        }
+        System.out.println( sumOfMatrix(matrix));
+        
+    }
+ ```
+ ### Write method that return shifting one right of integer array that comes to it as a parameter 
+ ```java
+  
+    public static int[] shifting ( int x[] ){
+    
+        int keep;
+       
+        
+        keep = x[9];
+        
+        for ( int i =x.length-1; i > 0; i--){
+        
+            x[i] = x[i-1];
+           
+        }
+    
+        x[0] = keep;
+      
+        return x;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        int [] list = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+        
+        int [] list2 = shifting(list);
+        
+      for ( int i =0; i < list2.length; i++){
+        
+            System.out.print( list2[i] + " ");
+        }
+        
+    }
+ ```
+ ###  Write method that return sum of two arrays with 10 elemenst that comes to it as a parameter
+ 
+ ```java
+ public static int sumOfArrays ( int x[], int y[]){
+    
+        int sum = 0;
+        
+        for ( int i =0 ; i < x.length; i++){
+        
+            for ( int j = 0; j < y.length; j++){
+            
+             sum += x[i] + y[j];
+            
+            
+            }
+        
+        
+        }
+    
+        return sum;
+    
+    }
+    
+    
+    public static void main(String[] args) {
+        
+        int [] list1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int [] list2 = {10 , 20, 30, 40, 50, 60, 70, 80, 90, 100};
+            
+            System.out.println( sumOfArrays(list1, list2));
+        
+    }
+ ```
+ ### Write method that returns check whether prime number or not that comes to it as a parameter
+ ```java
+ public static boolean check ( int x){
+    
+        for ( int i = 2 ; i < x; i++){
+        
+           if ( x % i == 0){
+           
+               return false;
+           }
+        
+        }
+    return true;
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        int number = s.nextInt();
+        
+        boolean condition = check(number);
+        
+        if ( condition == true ){
+        
+                System.out.println("Number is a prime number");
+        }
+        else {
+                System.out.println("Number isn't a prime number");
+        }
+        
+        
+    }
+```
+### Write method that return calculate average of odd numbers of a integer array that comes to it as a parameter 
+```java
+public static double averageOdd ( int []x) {
+    
+        double avg , counter = 0 , sum =0;
+        
+        
+        for ( int i =0; i < x.length; i++){
+        
+            if ( x[i] % 2 != 0){
+                
+                sum += x[i];
+                counter++;
+            
+            }
+        
+        }
+        
+        if ( counter == 0){
+            return 0;
+        }
+        else {
+            
+          avg = sum/counter;
+       
+        }
+    
+        return avg;
+    }
+    
+    public static void main(String[] args) {
+        
+        int list[] = { 1,2,3,4,5,6,7,8,9,10};
+        
+        System.out.println( averageOdd(list));
+        
+    }
+```
+
+### Write method that returns finding longest word and indexs this of a double dimension array that comes to it as a parameter
+```java
+public static String[] find ( String[][] x){
+    
+        String lngst = x[0][0];
+        int longest  = x[0][0].length(), indexA = 0, indexB = 0 ;
+        
+        for ( int i =0; i < x.length; i++){
+            
+            for ( int j =0; j< x[0].length; j++){
+            
+            if ( longest < x[i][j].length() ){
+            
+                longest = x[i][j].length();
+                lngst = x[i][j];
+                indexA = i;
+                indexB = j;
+                
+            }
+      
+            }
+        
+        }
+        String i = String.valueOf(indexA);  
+        String j = String.valueOf(indexB);
+        
+        String finded [] = {lngst, i, j};
+    
+        return finded;
+    }
+    
+    public static void main(String[] args) {
+        
+        
+        
+        Scanner s = new Scanner(System.in);
+        
+        String list [][] = new String[2][2];
+        
+        for ( int i = 0; i < list.length; i++){
+        
+            for ( int j = 0 ; j < list[0].length; j++){
+            
+            list[i][j] = s.next();
+            
+            }
+        }
+        
+        System.out.println("Longest String = " + find(list)[0] + " Indis =" + find(list)[1] + ", " + find(list)[2]);
+    }
+ ```
+ 
+ ###   Recursive method that prints your name on your screen 5 times.
+
+```java
+
+
+    public static void main(String[] args) {
+        
+        String name = "Emirhan Aydin Cakil";
+                
+        print (name , 5 );        
+    }
+    
+    public static int print ( String name, int x){
+    
+        if ( x == 0){
+            
+            return 0;
+        }
+        
+        System.out.println(name);
+        
+        return print (name , --x);
+    
+    }
+
+```
+
+###  Recursive method that sum of between integers of 1 - 5.
+
+```java
+
+  public static void main(String[] args) {
+        
+        System.out.println(sum(5));
+        
+    }
+    
+    public static int sum ( int x ){
+    
+        if ( x == 1){
+            
+            return 1;
+        }
+        
+        return x + sum( --x);
+    }
+```
+
+###  Recursive method that sum of integers divisible of 7 between of 1 to 100.
+
+```java
+ public static void main(String[] args) {
+        
+        System.out.println( sum (100) );
+    }
+    
+    public static int sum ( int x ){
+    
+        if ( x == 0){
+        
+            return 0;
+        }
+        
+        if ( x % 7 == 0){
+            
+            return x + sum (--x);
+        }
+        
+        return sum (--x);
+    }
+
+```
+
+### Same index and same value of two integer arrays.
+    
+   ##### a) Recursive method that prints this values on your screen.
+
+   ##### b) Recursive method that sum of this values.
+
+   ##### c) Recursive method that finding how much this values.
+
+```java
+
+public static void main(String[] args) {
+        
+        int arrayA []= {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+        
+        int arrayB []= {10, 23, 9 , 40, 32, 90, 70, 1, 20, 100};
+        
+       print ( arrayA, arrayB , 0);
+       
+     
+    }
+    
+    public static int print ( int x [], int y[], int i ){
+    
+        if ( i == x.length){
+            
+              System.out.println("Sum of sames = " + calculate ( x, y , 0));
+              System.out.println("Number of sames = " + counter ( x, y , 0 , 0));
+            
+            System.exit(0);
+    }
+    
+        if ( x[i] == y[i]){
+        
+            System.out.println(x[i]);
+        }
+        
+        return print ( x, y, ++i);
+    }
+    
+    public static int calculate (int x[], int y [], int i){
+    
+        if ( i == x.length){
+   
+            return 0;        
+        }
+        
+        if ( x[i] == y[i]){
+        
+           return  x[i] + calculate (x , y , ++i);
+            
+        }
+        return calculate (x, y , ++i);
+    }
+    
+    public static int counter (int x[], int y[], int i , int counter){
+    
+        if ( i == x.length){
+        
+            return counter;
+        }
+        
+        if ( x[i] == y[i]){
+            
+            return counter ( x, y, ++i, ++counter);
+            
+        }
+        
+        return counter ( x, y, ++i, counter);
+    
+    }
+```
+
+
+### Recursive method that calculate factorial that comes to as parameter.
+
+```java
+ public static void main(String[] args) {
+        
+        Scanner s = new Scanner ( System.in );
+        
+        int number = s.nextInt();
+        
+        System.out.println( factorial(number) );
+        
+    }
+    
+    public static int factorial ( int x){
+    
+        if ( x == 1){
+        
+            return 1;
+        }
+    
+        return x * factorial ( --x );
+    }
+
+
+```
+
+### Recursive method that finding how many digits of number.
+
+```java
+
+public static void main(String[] args) {
+        
+        Scanner s = new Scanner ( System.in );
+        
+        int number = s.nextInt();
+        
+        System.out.println( digit ( number , 0) );
+        
+    }
+    
+    public static int digit ( int x, int counter ){
+    
+        if ( x== 0 ){
+        
+            return counter;
+        }
+        x /= 10;
+        return digit (x , ++counter);
+    }
+```    
+
+### Recursive mathod that calculate power of coming two number from keyboard.
+
+```java
+
+ public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        int base = s.nextInt();
+        
+        int pwr = s.nextInt();
+        
+        System.out.println(calculate ( base, pwr));
+    }
+    
+    public static int calculate ( int x , int y ){
+    
+        if ( y == 1){
+        
+            return x;
+        }
+        
+        return x * calculate ( x, --y);
+    }
+```
+### Recursive method that finding value of fibonacci elements.
+
+```java
+public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        int number = s.nextInt();
+        
+        System.out.println(fibonacci (number));
+    }
+    
+    public static int fibonacci ( int x ){
+    
+    if ( x == 1 || x == 2){
+    
+        return 1;
+    }
+    
+    return fibonacci (x-2) + fibonacci (x-1);
+    }
+
+
+```
+
+### Recursive method that finding biggest element of integer array.
+
+```java
+
+public static void main(String[] args) {
+        
+        int [] list = { 9, 101, 10, 23, 24, 1, 11, 3, 4};
+        
+        System.out.println("index of biggest element = " + find(list , 0 , list[0] , 0) );
+        
+    }
+    
+    public static int find ( int x[] , int i , int biggest , int index){
+    
+        if ( i == x.length){
+        
+            return index+1;
+        }
+        
+        if ( biggest < x[i]){
+            
+            biggest = x[i];
+            index = i;
+        }
+        
+        return find ( x , ++i, biggest, index);
+    }
+```
+
+### Recursive method that checking series or not of integer array.
+
+```java
+
+  public static void main(String[] args) {
+        
+        
+        int list[] = new int [5];
+        
+        elements ( list);
+        
+        if ( check(list , 0) == 1 ){ 
+        
+            System.out.println("Array isn't a series");
+        }
+        
+        else {
+        
+            System.out.println("Array is a series");
+        }
+    }
+    
+    public static int [] elements (int []x){
+    
+        Scanner s = new Scanner (System.in);
+        
+        for ( int i =0 ; i < x.length; i++){
+        
+            x[i] = s.nextInt();
+        }
+        
+        return x;
+    
+    }
+    
+    public static int check ( int x[], int i ){
+    
+        if ( i == x.length-1){
+        
+            return 0;
+        }
+        
+        if ( x[i+1] > x[i]){
+        
+            return check (x, ++i);
+        }
+        
+        return 1;
+    }
+```
+
+### Recursive method that check symmetrical or not of a array.
+
+```java
+
+public static void main(String[] args) {
+        
+        int list[] = new int [5];
+        
+        elements ( list);
+        
+       if ( check (list , 0, list.length-1) == 0 ){
+       
+           System.out.println("List is symmetrical");
+       }
+       else {
+           
+           System.out.println("List isn't symmetrical");
+        }
+    }
+    
+    public static int[] elements( int x[]){
+           
+        Scanner s = new Scanner (System.in);
+        
+        for (int i = 0 ; i < x.length; i++){
+        
+            x[i] = s.nextInt();
+        }
+        
+        return x;
+    }
+    
+    
+    public static int check ( int x[] , int i , int j){
+    
+        if ( i == x.length-1){
+        
+            return 0;
+        }
+        
+        if ( x[i] != x[j] ){
+        
+            return 1;
+        }
+        
+        return check ( x, ++i, --j);
+    }
+
+```
+
+###  Recursive method that finding how many positive integer of integer array has.
+
+```java
+
+ public static void main(String[] args) {
+        
+        int list []= {1, -1, 2, -2, 3, -3, 4, -4, 5, -5};
+        
+        System.out.println("Number of positives = " + find (list , 0 , 0));
+        
+    }
+    
+    public static int find ( int x[], int i, int counter){
+    
+        if ( i == x.length){
+        
+            return counter;
+        }
+        
+        if ( x[i] > 0) {
+        
+            return find (x, ++i , ++counter);
+        }
+        
+        return find ( x, ++i , counter);
+    }
+```
+
+### Recursive method that finding how many lower case of string array has.
+
+```java
+
+public static void main(String[] args) {
+        
+        String [] sentence =  {"Emirhan", "Aydin", "Cakil"};
+        
+        System.out.println("Number of lower cases = " + find (sentence , 0 , 0 , 0));
+        
+    }
+    
+    public static int find ( String x [], int i, int j, int counter ){
+    
+        if ( i == x.length){
+        
+            return counter;
+        }
+        
+        if ( j == x[i].length()){
+            
+            return find (x, ++i, 0, counter);
+        }
+        
+        
+        if ( x[i].charAt(j) >= 'a' && x[i].charAt(j) <= 'z'){
+        
+            return find (x, i, ++j, ++counter);
+        }
+        else {
+            return find (x, i, ++j, counter);
+        }
+    }
+```
+
+### Recursive method that reverses elements of an array.
+
+```java
+public static void main(String[] args) {
+        
+        String list []= {"Emirhan", "Aydin" , "Cakil"};
+        
+        String keep = "";
+        
+        reverse ( list , keep , 0 , list.length-1);
+    }
+    
+    public static int reverse (String [] x , String keep,  int i , int j){
+    
+        if ( i == x.length/2 ){
+        
+            print (x);
+            return 0;
+        }
+        
+        keep = x[j];
+        x[j] = x[i];
+        x[i] = keep;
+        
+        return reverse ( x, keep , ++i, --j);
+    }
+    
+    public static void print ( String []x){
+    
+        for ( int i = 0 ; i < x.length; i++){
+        
+            System.out.println(x[i]);
+        }
+    }
+```
+
+### Recursive method that reverses string.
+
+```java
+public static void main(String[] args) {
+        
+        Scanner s = new Scanner (System.in);
+        
+        String rev = "";
+        
+        String sentence = s.nextLine();
+        
+        System.out.println(reverse (sentence , rev ,sentence.length()-1 ) );
+    }
+    
+    public static String reverse (String x ,String y, int i ){
+    
+        if ( i == -1){
+            
+            return y;
+        }
+        
+        y += x.charAt(i);
+      
+        return reverse ( x, y , --i);
+    }
+```
+
+### Strings are entered from keyboard. The method that converts these strings to 10 sentences with 4 words.
+
+```java
+
+ public static void main(String[] args) {
+
+        String list[] = new String[40];
+
+        elements(list);
+
+    }
+
+    public static void elements(String x[]) {
+
+        Scanner s = new Scanner(System.in);
+
+        int i = 0;
+
+        for (;;) {
+
+            x[i] = s.next();
+            i++;
+
+            if (i == x.length) {
+
+                print(x);
+                System.exit(1);
+
+            }
+
+        }
+
+    }
+
+    public static void print(String x[]) {
+
+        Random r = new Random();
+
+        int rnd;
+        int names;
+
+        int counter = 0;
+        int finishCounter = 0;
+
+        while (finishCounter < 10) {
+
+            rnd = r.nextInt(4) + 1;
+            
+
+            for (int i = 0; i < rnd; i++) {
+
+                names = r.nextInt (40)+1;
+                System.out.print(x[names] + " ");
+                
+            }
+            finishCounter++;
+            System.out.println(" ");
+
+        }
+
+        System.exit(0);
+    }
+```
+
+### Creating with using recursive method 100 8-letter passaword using English alphabet with lower case and 0-9 numbers.
+
+```java
+public static void main(String[] args) {
+
+        String list[] = new String[100];
+        String none = "";
+        Random r = new Random();
+
+        create(list, 0, 0, none, r);
+
+        print(list, 0);
+    }
+
+    public static String[] create(String x[], int i, int j, String keep, Random r) {
+
+        if (j == x.length) {
+
+            return x;
+        }
+        if (i < 8) {
+
+            if (condition(0, r) == 0) {
+
+                keep += rndNum(0, r);
+            } else {
+                keep += rndChar((char) 0, 0, r);
+            }
+
+            return create(x, ++i, j, keep, r);
+
+        } else {
+    
+            x[j] = keep;
+            keep = "";
+            return create(x, 0, ++j, keep, r);
+        }
+
+    }
+
+    public static char rndChar(char keepC, int rnd, Random r) {
+
+        rnd = r.nextInt(123 - 97) + 97;
+        keepC = ((char) rnd);
+
+        return keepC;
+    }
+
+    public static int rndNum(int keepNum, Random r) {
+
+        keepNum = r.nextInt(10);
+
+        return keepNum;
+    }
+
+    public static int condition(int trueOrFalse, Random r) {
+
+        trueOrFalse = r.nextInt(2);
+
+        return trueOrFalse;
+    }
+
+    public static int print(String[] x, int i) {
+
+        if (i == x.length) {
+
+            System.exit(0);
+        }
+
+        System.out.println((i + 1) + " " + x[i]);
+
+        return print(x, ++i);
+    }
+
+
+```
+
+
+### 100 strings are entered from the keyboard and these strings are combined. 20 words with 5 letters are randomly generated from these 100 strings. algorithm that prints the equal of these 20 words to the screen.
+
+```java
+public static void main(String[] args) {
+
+        String longString = "";
+
+        longString = elements(longString);
+
+        elementsOfList(longString);
+    }
+
+    public static String elements(String x) {
+
+        Scanner s = new Scanner(System.in);
+
+        for (int i = 0; i < 100; i++) {
+
+            x += s.next();
+        }
+
+        return x;
+    }
+
+    public static void elementsOfList(String x) {
+
+        Random r = new Random();
+
+        String list[] = new String[20];
+        String keep = "";
+
+        int rnd;
+
+        for (int i = 0; i < list.length; i++) {
+
+            rnd = r.nextInt(x.length() - 4);
+
+            for (int j = rnd; j < rnd + 5; j++) {
+
+                keep += x.charAt(j);
+            }
+            list[i] = keep;
+            keep = "";
+        }
+        allPrint(list);
+        check(list);
+    }
+
+    public static void allPrint(String[] x) {
+
+    // that method generated for checking list.
+ 
+        for (int i = 0; i < x.length; i++) {
+
+            System.out.println(x[i]);
+        }
+    }
+
+    public static void check(String[] x) {
+
+        for (int i = 0; i < x.length; i++) {
+
+            for (int j = i + 1; j < x.length; j++) {
+
+                if (x[i].equals(x[j])) {
+
+                    System.out.println("same elements of random list =" + x[i]);
+                }
+            }
+        }
+    }
+```
+
